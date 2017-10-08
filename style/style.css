@@ -67,6 +67,7 @@ html {
 }
 
 body {
+  color: #333;
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
 }
@@ -75,13 +76,31 @@ p {
   margin-bottom: 15px;
 }
 
+sup {
+  font-size: .5em;
+  vertical-align: super;
+}
+
 .img--fluid {
   width: 100%;
 }
 
-sup {
-  font-size: .5em;
-  vertical-align: super;
+.section__title {
+  color: #555;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.section__title::after {
+  content: '';
+  background: #24b79d;
+  display: block;
+  height: 6px;
+  margin-top: 3px;
+  position: absolute;
+  width: 300px;
 }
 
 /**
@@ -208,6 +227,10 @@ sup {
   background: #24b79d;
 }
 
+.bg--contrast {
+  background: #f3f3f3;
+}
+
 /**
  * 2.5 Buttons
  */
@@ -301,7 +324,9 @@ sup {
  */
 .showcase__card {
   border: 1px solid #ddd;
+  overflow: hidden;
   position: relative;
+  max-height: 212px;
 }
 
 .showcase__card img {
@@ -340,3 +365,7 @@ sup {
   position: static;
   padding: 0 0 20px 0;
 }
+
+/**
+ * 6.1 Plans
+ */
