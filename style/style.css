@@ -239,14 +239,18 @@ sup {
   display: inline-block;
 }
 
-.site-menu > ul li > a:link {
+.site-menu__element:link {
   color: #f3f3f3;
   display: inline-block;
   padding: 10px 20px;
   text-decoration: none;
 }
 
-.site-menu > ul li > a:visited {
+.site-menu__element:link:last-child {
+  margin-right: -20px;
+}
+
+.site-menu__element:visited {
   color: #f3f3f3;
 }
 
