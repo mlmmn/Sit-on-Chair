@@ -2,10 +2,12 @@
  * Sit On chair style.css
  */
 
-/* http://meyerweb.com/eric/tools/css/reset/
-v2.0 | 20110126
-License: none (public domain)
-*/
+/**
+ * 1.1 CSS Reset
+ * http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain)
+ */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -52,61 +54,80 @@ table {
 }
 
 /**
- * Common styles
+ * 2.1 Common styles
  */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+}
 
 img {
   max-width: 100%;
 }
 
+sup {
+  font-size: .5em;
+  vertical-align: super;
+}
+
 /**
- * Gridesque
+ * 2.2 Gridesque
  */
 .container {
   margin: 0 auto;
   max-width: 960px;
 }
 
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-12 {
+.col--2,
+.col--3,
+.col--4,
+.col--5,
+.col--6,
+.col--7,
+.col--8,
+.col--12 {
   float: left;
 }
 
-.col-2 {
+.col--2 {
   width: 16.6666%;
 }
 
-.col-3 {
+.col--3 {
   width: 25%;
 }
 
-.col-4 {
+.col--4 {
   width: 33.3333%;
 }
 
-.col-5 {
+.col--5 {
   width: 41.6666%;
 }
 
-.col-6 {
+.col--6 {
   width: 50%;
 }
 
-.col-7 {
+.col--7 {
   width: 56.8333%;
 }
 
-.col-8 {
+.col--8 {
   width: 66.6666%
 }
 
-.col-12 {
+.col--12 {
   width: 100%;
 }
 
@@ -119,7 +140,65 @@ img {
   clear: both;
 }
 
+/**
+ * 2.3 Text
+ */
+.text--center {
+  text-align: center;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.text--semibold {
+  font-weight: 600;
+}
 
 /**
- * Header & nav
+ * 2.4 Colours
  */
+.text--info {
+  color: #24b79d;
+}
+
+.text--invert {
+  color: #fff;
+}
+
+.bg--info {
+  background: #24b79d;
+}
+
+/**
+ * 3.1 Header
+ */
+.site-header {
+  background: #000;
+}
+
+.site-name {
+  margin: 10px 0;
+}
+
+/**
+ * 3.2 Nav
+ */
+.site-menu > ul li {
+  display: inline-block;
+}
+
+.site-menu > ul li > a:link {
+  color: inherit;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
