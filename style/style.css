@@ -67,7 +67,7 @@ html {
 }
 
 body {
-  color: #333;
+  color: #333333;
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
 }
@@ -369,3 +369,26 @@ sup {
 /**
  * 6.1 Plans
  */
+
+
+/**
+ * XX Footer
+ */
+.site-footer {
+  color: #999999;
+  font-size: 1.4rem;
+}
+
+.site-footer--padded-col {
+  /*padding-bottom: 1.2rem;*/
+  padding-top: 1.2rem;
+}
+
+.site-footer__social img {
+  display: inline-block;
+}
+
+.site-footer .site-name {
+  font-size: 1.8rem;
+  margin: 0;
+}
