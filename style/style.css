@@ -369,7 +369,118 @@ sup {
 /**
  * 6.1 Plans
  */
+.plans__card,
+.plans__card::before,
+.plans__card::after {
+  background: #f9f9f9;
+  border: 1px solid #999999;
+  position: relative;
+}
 
+.plans__card::before,
+.plans__card::after {
+  border: inherit;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 4rem;
+  left: 50%;
+  padding: 0;
+  position: absolute;
+  top: -.75rem;
+  transform: translate(-50%, -50%);
+  width: 4rem;
+}
+
+.plans__card::after {
+  background: #999999;
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+.plans__card--featured,
+.plans__card--featured:before {
+  background: #27c5aa;
+  border: 1px solid #27c5aa;
+}
+
+.plans__card--featured::after {
+  background: #f9f9f9;
+}
+
+.plans__card__title {
+  font-size: 2rem;
+  margin: 3rem auto;
+  margin-bottom: 2rem;
+}
+
+.plans__card--featured .plans__card__title {
+  color: #ffffff;
+}
+
+.plans__card__price {
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 50%;
+  height: 9rem;
+  margin: 2rem auto;
+  padding: 2.2rem 0;
+  width: 9rem;
+}
+
+.plans__card--featured .plans__card__price {
+  border: inherit;
+}
+
+.plans__card__price__amount {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  position: relative;
+}
+
+.plans__card--featured .plans__card__price {
+  color: #27c5aa;
+}
+
+.plans__card__price__amount sup {
+  font-size: .4em;
+  position: relative;
+  top: -.5em;
+}
+
+.plans__card__benefits {
+  font-size: 2rem;
+  min-height: 13rem;
+}
+
+.plans__card__benefits li {
+  padding: .5rem;
+}
+
+.plans__card__benefits li:nth-child(odd),
+.plans__card--featured .plans__card__benefits li:nth-child(even) {
+  background: red;
+}
+
+.plans__card__benefits li:nth-child(even),
+.plans__card--featured .plans__card__benefits li:nth-child(odd) {
+  background: yellow;
+}
+
+.plans__card__button:link,
+.plans__card__button:visited {
+  background: olive;
+  border-radius: 5px;
+  color: #ffffff;
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 1rem auto;
+  max-width: 50%;
+  padding: .75rem;
+  text-decoration: none;
+}
 
 /**
  * XX Footer
