@@ -85,6 +85,11 @@ sup {
   width: 100%;
 }
 
+.img--center {
+  display: block;
+  margin: 0 auto;
+}
+
 .section__title {
   color: #555;
   font-size: 2rem;
@@ -235,6 +240,7 @@ sup {
  * 2.5 Buttons
  */
 .button {
+  border: 0;
   border-radius: 5px;
   display: inline-block;
   font-weight: 500;
@@ -481,6 +487,62 @@ sup {
   padding: .75rem;
   text-decoration: none;
 }
+
+/**
+ * XX Contact
+ */
+.contact__form input[type="text"],
+.contact__form input[type="email"],
+.contact__form textarea,
+.contact__form button {
+  display: block;
+  font-family: inherit;
+  font-size: 2rem;
+  height: 4rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 100%;
+}
+
+.contact__form textarea {
+  height: 18rem;
+  resize: vertical;
+}
+
+.contact__form img {
+  max-width: 75%;
+}
+
+.contact__form__agreement {
+  font-size: 1.4rem;
+  margin: 3.1rem auto;
+  display: block;
+}
+
+.contact__form__agreement input[type="checkbox"] {
+  height: 4rem;
+  float: left;
+  margin-top: -.5rem;
+  margin-right: 1rem;
+  width: 4.8rem;
+}
+
+.contact__form__agreement input[type="checkbox"]::before {
+  border: 1px solid #27c5aa;
+  background: #ffffff;
+  content: '';
+  display: inline-block;
+  height: 40px;
+  width: 48px;
+}
+
+.contact__form__agreement input[type="checkbox"]:checked::before {
+  background: url("../images/form_ok.jpg");
+}
+
+/*.contact__form .button {
+  margin: 2rem auto;
+}*/
 
 /**
  * XX Footer
