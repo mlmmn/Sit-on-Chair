@@ -67,13 +67,13 @@ html {
 }
 
 body {
-  color: #333333;
+  color: #555555;
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
 }
 
 p {
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 sup {
@@ -94,7 +94,7 @@ sup {
   color: #555;
   font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
   text-transform: uppercase;
 }
 
@@ -102,19 +102,18 @@ sup {
   content: '';
   background: #24b79d;
   display: block;
-  height: 6px;
-  margin-top: 3px;
+  height: .6rem;
+  margin-top: .3rem;
   position: absolute;
-  width: 300px;
+  width: 30rem;
 }
 
 /**
  * 2.2 Gridesque
  */
 .container {
-  border: 1px solid red;
-  margin: 30px auto;
-  max-width: 1000px;
+  margin: 3rem auto 5rem auto;
+  max-width: 105rem;
 }
 
 .container--compact {
@@ -185,7 +184,7 @@ sup {
 }
 
 .row {
-  margin: 0 -15px;
+  margin: 0 -1.5rem;
 }
 
 /**
@@ -239,19 +238,31 @@ sup {
 /**
  * 2.5 Buttons
  */
-.button {
+.button,
+.button:link,
+.button:visited,
+.button:hover,
+.button:active {
   border: 0;
-  border-radius: 5px;
+  border-radius: 10px;
+  cursor: pointer;
   display: inline-block;
-  font-weight: 500;
-  padding: 10px;
+  font-weight: 600;
+  line-height: 1;
+  margin: 2rem;
+  outline: none;
+  padding: .75em 2em;
   text-transform: uppercase;
 }
 
 .button--info {
-  background: #24b79d;
+  background: #27c5aa;
   color: #f3f3f3;
   text-decoration: none;
+}
+
+.button--info:hover {
+  background: #db4862;
 }
 
 /**
@@ -259,15 +270,20 @@ sup {
  */
 .site-header {
   background: #000;
+  font-size: 1.4rem;
 }
 
 .site-name {
-  margin: 10px 0;
+  margin: 1.2rem 0;
 }
 
 /**
  * 3.2 Nav
  */
+.site-menu {
+  margin: .2rem 0;
+}
+
 .site-menu > ul li {
   display: inline-block;
 }
@@ -275,12 +291,12 @@ sup {
 .site-menu__element:link {
   color: #f3f3f3;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   text-decoration: none;
 }
 
 .site-menu__element:link:last-child {
-  margin-right: -20px;
+  margin-right: -2rem;
 }
 
 .site-menu__element:visited {
@@ -297,10 +313,11 @@ sup {
   background: -o-linear-gradient(90deg, #e0dfe6 0%, #fbfbfb 40%); /* opera 11.10+ */
   background: -ms-linear-gradient(90deg, #e0dfe6 0%, #fbfbfb 40%); /* ie10+ */
   background: linear-gradient(0deg, #e0dfe6 0%, #fbfbfb 40%); /* w3c */
+  color: #000000;
 }
 
 .hero > .container {
-  padding: 100px 0 50px 0;
+  padding: 10rem 0 5rem 0;
 }
 
 /**
@@ -308,21 +325,22 @@ sup {
  */
 
 .hero__header {
-  font-size: 3.5rem;
-  margin: 15px 0 30px 0;
+  font-size: 4rem;
+  margin: 1.5rem 0 3rem 0;
 }
 
 .hero__bollocks {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
   line-height: 1.5;
-  padding: 0 50px;
+  padding: 0 3rem;
 }
 
-.hero__button {
+.hero__button:link {
   display: inline-block;
   font-size: 2rem;
-  padding: 15px 30px;
-  margin: 15px 0;
+  padding: 1.5rem 3rem;
+  margin: 1.5rem 0;
 }
 
 /**
@@ -332,7 +350,7 @@ sup {
   border: 1px solid #ddd;
   overflow: hidden;
   position: relative;
-  max-height: 212px;
+  max-height: 21.2rem;
 }
 
 .showcase__card img {
@@ -346,10 +364,11 @@ sup {
 .showcase__card__title {
   background: rgba(255, 255, 255, .4);
   bottom: 10px;
+  color: #000000;
   font-size: 1.5rem;
   font-weight: 600;
   left: 0;
-  padding: 10px 10px 20px 10px;
+  padding: 1rem 1rem 2rem 1rem;
   position: absolute;
   right: 0;
 }
@@ -360,11 +379,11 @@ sup {
   display: block;
   height: 6px;
   position: absolute;
-  width: 130px;
+  width: 13rem;
 }
 
 .showcase__card--informative {
-  padding: 20px;
+  padding: 2.5rem 2rem;
 }
 
 .showcase__card--informative .showcase__card__title {
@@ -379,29 +398,31 @@ sup {
 .plans__card::before,
 .plans__card::after {
   background: #f9f9f9;
-  border: 1px solid #999999;
+  border: 1px solid #c2c2c2;
   position: relative;
 }
 
 .plans__card::before,
 .plans__card::after {
+  background: #ffffff;
   border: inherit;
   border-radius: 50%;
   content: '';
   display: block;
-  height: 4rem;
+  height: 5.6rem;
   left: 50%;
   padding: 0;
   position: absolute;
   top: -.75rem;
   transform: translate(-50%, -50%);
-  width: 4rem;
+  width: 5.6rem;
 }
 
 .plans__card::after {
-  background: #999999;
-  height: 1.8rem;
-  width: 1.8rem;
+  background: #c2c2c2;
+  border: 0;
+  height: 2.6rem;
+  width: 2.6rem;
 }
 
 .plans__card--featured,
@@ -415,9 +436,9 @@ sup {
 }
 
 .plans__card__title {
-  font-size: 2rem;
+  color: #27c5aa;
+  font-size: 2.5rem;
   margin: 3rem auto;
-  margin-bottom: 2rem;
 }
 
 .plans__card--featured .plans__card__title {
@@ -425,13 +446,19 @@ sup {
 }
 
 .plans__card__price {
-  background: white;
-  border: 1px solid #f0f0f0;
+  background: #ffffff;
+  border: inherit;
   border-radius: 50%;
-  height: 9rem;
+  color: #c2c2c2;
+  font-weight: bold;
+  height: 13rem;
   margin: 2rem auto;
-  padding: 2.2rem 0;
-  width: 9rem;
+  padding: 3.2rem 0;
+  width: 13rem;
+}
+
+.plans__card__price p {
+  margin-bottom: 1rem;
 }
 
 .plans__card--featured .plans__card__price {
@@ -439,10 +466,13 @@ sup {
 }
 
 .plans__card__price__amount {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 5rem;
   margin-bottom: .5rem;
   position: relative;
+}
+
+.plans__card__price__amount + p {
+  font-size: 1.6rem;
 }
 
 .plans__card--featured .plans__card__price {
@@ -456,36 +486,38 @@ sup {
 }
 
 .plans__card__benefits {
-  font-size: 2rem;
-  min-height: 13rem;
+  font-size: 2.5rem;
+  min-height: 20rem;
 }
 
 .plans__card__benefits li {
-  padding: .5rem;
+  padding: 1rem .5rem;
 }
 
 .plans__card__benefits li:nth-child(odd),
 .plans__card--featured .plans__card__benefits li:nth-child(even) {
-  background: red;
+  background: #e4e4e4;
 }
 
 .plans__card__benefits li:nth-child(even),
 .plans__card--featured .plans__card__benefits li:nth-child(odd) {
-  background: yellow;
+  background: #f1f1f1;
 }
 
-.plans__card__button:link,
-.plans__card__button:visited {
-  background: olive;
-  border-radius: 5px;
+.plans__card .button {
+  font-size: 1.8rem;
+}
+
+.plans__card--featured .button--info:link,
+.plans__card--featured .button--info:visited,
+.plans__card--featured .button--info:active {
+  background: #ffffff;
+  color: #27c5aa;
+}
+
+.plans__card--featured .button--info:hover {
+  background: #db4862;
   color: #ffffff;
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin: 1rem auto;
-  max-width: 50%;
-  padding: .75rem;
-  text-decoration: none;
 }
 
 /**
@@ -494,7 +526,7 @@ sup {
 .contact__form input[type="text"],
 .contact__form input[type="email"],
 .contact__form textarea,
-.contact__form button {
+.contact__form .button {
   display: block;
   font-family: inherit;
   font-size: 2rem;
