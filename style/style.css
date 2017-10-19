@@ -69,7 +69,7 @@ html {
 body {
   color: #555555;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 p {
@@ -90,9 +90,20 @@ sup {
   margin: 0 auto;
 }
 
+.block--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
 .section__title {
   color: #555;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 500;
   margin-bottom: 5rem;
   text-transform: uppercase;
@@ -102,8 +113,8 @@ sup {
   content: '';
   background: #24b79d;
   display: block;
-  height: .6rem;
-  margin-top: .3rem;
+  height: .8rem;
+  margin-top: 1rem;
   position: absolute;
   width: 30rem;
 }
@@ -215,6 +226,26 @@ sup {
   font-weight: 600;
 }
 
+.title-1 {
+  font-size: 4rem;
+}
+
+.title-2 {
+  font-size: 3rem;
+}
+
+.title-3 {
+  font-size: 2.2rem;
+}
+
+.title-4 {
+  font-size: 1.8rem;
+}
+
+.title-4 {
+  font-size: 1.3rem;
+}
+
 /**
  * 2.4 Colours
  */
@@ -247,15 +278,31 @@ sup {
   border-radius: 10px;
   cursor: pointer;
   display: inline-block;
-  font-weight: 600;
   line-height: 1;
-  margin: 2rem;
+  margin: 2rem 0;
   outline: none;
-  padding: .75em 2em;
+  padding: .5em 2em;
   text-transform: uppercase;
 }
 
-.button--info {
+.button--medium,
+.button--big {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.button--big {
+  font-size: 2.5em;
+}
+
+.button--fluid {
+  width: 100%;
+}
+
+.button--info,
+.button--info:link,
+.button--info:visited,
+.button--info:active {
   background: #27c5aa;
   color: #f3f3f3;
   text-decoration: none;
@@ -325,12 +372,11 @@ sup {
  */
 
 .hero__header {
-  font-size: 4rem;
   margin: 1.5rem 0 3rem 0;
 }
 
 .hero__bollocks {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   letter-spacing: 1px;
   line-height: 1.5;
   padding: 0 3rem;
@@ -350,7 +396,7 @@ sup {
   border: 1px solid #ddd;
   overflow: hidden;
   position: relative;
-  max-height: 21.2rem;
+  max-height: 20rem;
 }
 
 .showcase__card img {
@@ -383,12 +429,12 @@ sup {
 }
 
 .showcase__card--informative {
-  padding: 2.5rem 2rem;
+  padding: 1.5rem;
 }
 
 .showcase__card--informative .showcase__card__title {
   position: static;
-  padding: 0 0 20px 0;
+  padding: 0 0 2rem 0;
 }
 
 /**
@@ -398,7 +444,8 @@ sup {
 .plans__card::before,
 .plans__card::after {
   background: #f9f9f9;
-  border: 1px solid #c2c2c2;
+  border: 2px solid #c2c2c2;
+  margin-top: 4rem;
   position: relative;
 }
 
@@ -411,9 +458,10 @@ sup {
   display: block;
   height: 5.6rem;
   left: 50%;
+  margin-top: 0;
   padding: 0;
   position: absolute;
-  top: -.75rem;
+  top: -1rem;
   transform: translate(-50%, -50%);
   width: 5.6rem;
 }
@@ -421,14 +469,14 @@ sup {
 .plans__card::after {
   background: #c2c2c2;
   border: 0;
-  height: 2.6rem;
-  width: 2.6rem;
+  height: 2.8rem;
+  width: 2.8rem;
 }
 
 .plans__card--featured,
-.plans__card--featured:before {
+.plans__card--featured::before {
   background: #27c5aa;
-  border: 1px solid #27c5aa;
+  border: 2px solid #27c5aa;
 }
 
 .plans__card--featured::after {
@@ -491,6 +539,7 @@ sup {
 }
 
 .plans__card__benefits li {
+  color: #9c9c9c;
   padding: 1rem .5rem;
 }
 
@@ -523,10 +572,7 @@ sup {
 /**
  * XX Contact
  */
-.contact__form input[type="text"],
-.contact__form input[type="email"],
-.contact__form textarea,
-.contact__form .button {
+.contact__form__input {
   border: 1px solid #27c5aa;
   display: block;
   font-family: inherit;
@@ -535,11 +581,17 @@ sup {
   height: 6.6rem;
   margin: 2rem auto;
   padding: 1rem;
+  transition: box-shadow .15s;
   width: 100%;
 }
 
-.contact__form textarea {
-  height: 18rem;
+.contact__form__input:focus {
+  box-shadow: 0 0 10px #27c5aa;
+  outline: 0;
+}
+
+textarea.contact__form__input {
+  min-height: 18rem;
   resize: vertical;
 }
 
@@ -566,8 +618,8 @@ sup {
   background: #ffffff;
   content: '';
   display: inline-block;
-  height: 40px;
-  width: 48px;
+  height: 4rem;
+  width: 4.8rem;
 }
 
 .contact__form__agreement input[type="checkbox"]:checked::before {
@@ -593,9 +645,4 @@ sup {
 
 .site-footer__social img {
   display: inline-block;
-}
-
-.site-footer .site-name {
-  font-size: 1.8rem;
-  margin: 0;
 }

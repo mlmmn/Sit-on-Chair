@@ -29,7 +29,7 @@
     </div>
   </header>
 
-  <section class="hero">
+  <div class="hero">
     <div class="container container--compact">
       <div class="row">
         <div class="col--1"></div>
@@ -37,18 +37,19 @@
           <img src="images/black_chair.png" alt="A comfortable black chair" class="img--fluid">
         </div>
         <div class="col--6 text--center">
-          <h2 class="hero__header text--uppercase text--semibold">
+          <p class="hero__header title-1 text--uppercase text--semibold">
             Sit <span class="text--brand-em">On</span> Our <span class="text--brand-em">Chair</span>
-          </h2>
+          </p>
           <p class="hero__bollocks">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos repellat aspernatur ipsam eaque impedit debitis nesciunt rerum, odit esse neque ea aut deserunt tempore voluptatem molestias.</p>
-          <a href="#" class="hero__button button button--info">See more</a>
+          <a href="#" class="button button--medium button--info">See more</a>
         </div>
           <div class="col--1"></div>
       </div>
     </div>
-  </section>
+  </div>
 
   <section class="showcase">
+    <h2 class="hidden">Our products</h2>
     <div class="container">
       <div class="row">
         <div class="col--4">
@@ -155,14 +156,14 @@
 
       <form class="contact__form row">
         <div class="col--8">
-          <input type="text" name="name" placeholder="Your name">
-          <input type="email" name="email" placeholder="Your e-mail">
-          <textarea name="message" placeholder="Message"></textarea>
+          <input class="contact__form__input" type="text" name="name" placeholder="Your name">
+          <input class="contact__form__input" type="email" name="email" placeholder="Your e-mail">
+          <textarea class="contact__form__input" name="message" placeholder="Message"></textarea>
         </div>
         <div class="col--4">
           <img src="images/red_chair.png" alt="A comfortable red chair" class="img--center">
           <label class="contact__form__agreement"><input type="checkbox" name="agreement">I hereby agree to my personal data being processed</label>
-          <button class="button button--info" type="submit">Submit</button>
+          <button class="button button--info button--big button--fluid" type="submit">Submit</button>
         </div>
       </form>
     </div>
@@ -181,9 +182,9 @@
           <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
         </div>
         <div class="col--2 site-footer--padded-col">
-          <h1 class="site-name text--right text--uppercase text--semibold">
+          <p class="title-4 text--right text--uppercase text--semibold">
             Sit <span class="text--bold">On</span> Chair
-          </h1>
+          </p>
         </div>
       </div>
     </div>
