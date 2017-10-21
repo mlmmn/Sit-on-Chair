@@ -333,7 +333,7 @@ sup {
   position: relative;
 }
 
-.site-menu > .site-menu__element:link:last-child {
+.site-menu ul > .site-menu__element:last-child {
   margin-right: -2rem;
 }
 
