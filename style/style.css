@@ -367,6 +367,12 @@ sup {
   padding: 10rem 0 5rem 0;
 }
 
+.carousel__arrow {
+  color: #24b79d;
+  font-size: 8rem;
+  padding-top: 7.5rem;
+}
+
 /**
  * 4.2 Hero contents
  */
