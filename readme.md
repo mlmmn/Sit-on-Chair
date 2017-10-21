@@ -1,6 +1,6 @@
 # Sit on Chair
 
-## About this project
+## About the project
 This is a sample website project made purely for portfolio purposes by showing my ability to write quality code.
 
 [View demo](https://mlmmn.github.io/Sit-on-Chair/)
