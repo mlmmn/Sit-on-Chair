@@ -593,6 +593,7 @@ sup {
 
 .plans__card .button {
   font-size: 1.8rem;
+  padding: .3em 2em;
 }
 
 .plans__card--featured .button--info:link,
@@ -663,10 +664,6 @@ textarea.contact__form__input {
 .contact__form__agreement input[type="checkbox"]:checked::before {
   background: url("../images/form_ok.jpg");
 }
-
-/*.contact__form .button {
-  margin: 2rem auto;
-}*/
 
 /**
  * XX Footer
