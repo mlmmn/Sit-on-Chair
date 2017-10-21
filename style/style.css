@@ -639,7 +639,8 @@ textarea.contact__form__input {
 }
 
 .contact__form__agreement {
-  font-size: 1.4rem;
+  color: #999999;
+  font-size: 1.6rem;
   margin: 3.1rem auto;
   display: block;
 }
