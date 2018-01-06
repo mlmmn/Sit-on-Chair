@@ -24,14 +24,14 @@
     background: rgba(255, 255, 255, .2);
 }
 
-.site-menu__element:hover>.site-menu__dropdown {
-    display: block;
-}
-
 .site-menu .site-menu__dropdown {
     display: none;
     padding-top: 1.2rem;
     position: absolute;
+}
+
+.site-menu .site-menu__dropdown--visible {
+    display: block;
 }
 
 .site-menu .site-menu__dropdown .site-menu__element {
