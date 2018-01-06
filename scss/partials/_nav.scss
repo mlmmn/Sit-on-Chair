@@ -1,0 +1,58 @@
+/**
+ * 3.2 Nav
+ */
+
+.site-menu__element {
+    color: #f3f3f3;
+    display: inline-block;
+    position: relative;
+}
+
+.site-menu>ul>.site-menu__element:last-child {
+    margin-right: -2rem;
+}
+
+.site-menu__element a:link,
+.site-menu__element a:visited {
+    color: inherit;
+    display: block;
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+}
+
+.site-menu__element a:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+.site-menu__element:hover>.site-menu__dropdown {
+    display: block;
+}
+
+.site-menu .site-menu__dropdown {
+    display: none;
+    padding-top: 1.2rem;
+    position: absolute;
+}
+
+.site-menu .site-menu__dropdown .site-menu__element {
+    background: #000000;
+    display: block;
+    position: relative;
+}
+
+.site-menu .site-menu__dropdown .site-menu__element:first-child::before {
+    content: '';
+    border-bottom: 1rem solid #000000;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    display: block;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 0;
+}
+
+.site-menu .site-menu__dropdown .site-menu__element a {
+    display: block;
+}
