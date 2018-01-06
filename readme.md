@@ -12,7 +12,7 @@ This is a sample website project made purely for portfolio purposes by showing m
 - [x] BEM CSS convention
 - [ ] Used CSS framework
 - [ ] Responsive CSS rules
-- [ ] JavaScript
+- [x] JavaScript
 
 ## Design sample
 ![Target design](warsztat1.jpg)
