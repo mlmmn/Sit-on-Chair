@@ -1,7 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
+    bindHeroCarousel();
     bindDropdownMenu();
     bindShowcaseCards();
 });
+
+function bindHeroCarousel() {
+    var counter = 0;
+    var prevButton = document.querySelector('.carousel__arrow[data-dir=prev]');
+    var nextButton = document.querySelector('.carousel__arrow[data-dir=next]');
+
+    prevButton.addEventListener('mousedown', prevElement);
+    nextButton.addEventListener('mousedown', nextElement);
+
+    function prevElement() {
+        var list = this.parentElement.querySelector('.carousel__list');
+        var firstElement = list.firstElementChild;
+        var secondElement = list.lastElementChild;
+        var temp;
+
+        firstElement.classList.remove('carousel__list__element--active');
+        secondElement.classList.add('carousel__list__element--active');
+
+        temp = secondElement.cloneNode(true);
+        list.removeChild(secondElement);
+        list.insertBefore(temp, firstElement);
+    }
+
+    function nextElement() {
+        var list = this.parentElement.querySelector('.carousel__list');
+        var firstElement = list.firstElementChild;
+        var secondElement = firstElement.nextElementSibling;
+        var temp;
+
+        firstElement.classList.remove('carousel__list__element--active');
+        secondElement.classList.add('carousel__list__element--active');
+
+        temp = firstElement.cloneNode(true);
+        list.removeChild(firstElement);
+        list.appendChild(temp);
+    }
+}
 
 function bindDropdownMenu() {
     var dropdownMenus = document.querySelectorAll('.site-menu__dropdown');

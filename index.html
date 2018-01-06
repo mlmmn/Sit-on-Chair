@@ -41,23 +41,31 @@
 
   <div class="hero">
     <div class="container container--compact">
-      <div class="row">
-        <div class="col--1 carousel__arrow">
-          <i class="fa fa-angle-left" aria-hidden="true"></i>
-        </div>
+      <div class="row carousel">
+        <i class="col--1 carousel__arrow fa fa-angle-left" aria-hidden="true" data-dir="prev"></i>
         <div class="col--4">
-          <img src="images/black_chair.png" alt="A comfortable black chair" class="img--fluid">
+          <ul class="carousel__list">
+            <li class="carousel__list__element--active">
+              <img src="images/black_chair.png" alt="A comfortable black chair" class="img--fluid">
+            </li>
+            <li>
+              <img src="images/chair_PNG6902.png" alt="A chair of your dreams" class="img--fluid">
+            </li>
+            <li>
+              <img src="images/Transparent_Brown_Leather_Chair_PNG_Clipart.png" alt="A king's chair" class="img--fluid">
+            </li>
         </div>
         <div class="col--6 text--center">
           <p class="hero__header title-1 text--uppercase text--semibold">
-            Sit <span class="text--brand-em">On</span> Our <span class="text--brand-em">Chair</span>
+            Sit
+            <span class="text--brand-em">On</span> Our
+            <span class="text--brand-em">Chair</span>
           </p>
-          <p class="hero__bollocks">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos repellat aspernatur ipsam eaque impedit debitis nesciunt rerum, odit esse neque ea aut deserunt tempore voluptatem molestias.</p>
+          <p class="hero__bollocks">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos repellat aspernatur ipsam eaque impedit debitis nesciunt
+            rerum, odit esse neque ea aut deserunt tempore voluptatem molestias.</p>
           <a href="#" class="button button--medium button--info">See more</a>
         </div>
-          <div class="col--1 text--right carousel__arrow">
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-          </div>
+        <i class="col--1 text--right carousel__arrow fa fa-angle-right" aria-hidden="true" data-dir="next"></i>
       </div>
     </div>
   </div>

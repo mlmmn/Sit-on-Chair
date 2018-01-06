@@ -24,6 +24,8 @@
 
 .carousel__arrow {
     color: #24b79d;
+    cursor: pointer;
+    display: block;
     font-size: 8rem;
     padding-top: 7.5rem;
 }
@@ -49,4 +51,15 @@
     font-size: 2rem;
     padding: 1.5rem 3rem;
     margin: 1.5rem 0;
+}
+
+.carousel__list {
+    li {
+        display: none;
+
+        &.carousel__list__element--active {
+            display: block;
+            width: 100%;
+        }
+    }
 }
