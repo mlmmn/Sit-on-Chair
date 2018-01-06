@@ -15,7 +15,7 @@ This is a sample website project made purely for portfolio purposes by showing m
 - [ ] JavaScript
 
 ## Design sample
-![Target design](https://raw.githubusercontent.com/CodersLab/POZ_FRO_W_04_Zaawansowany_HTML_CSS/master/4_Warsztaty/warsztat1.jpg?token=AH4Q4086W2TEolz5uLvNLXiZGP1uNYnnks5Z9FTHwA%3D%3D)
+![Target design](warsztat1.jpg)
 
 ## Authors
 - **Miłosław Politowski** - all the code work
