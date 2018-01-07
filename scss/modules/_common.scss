@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    color: #555555;
+    color: $gray-color;
     font-family: 'Raleway', sans-serif;
     font-size: 1.3rem;
 }
@@ -47,19 +47,19 @@ sup {
 }
 
 .section__title {
-    color: #555;
+    color: $gray-color;
     font-size: 2.1rem;
     font-weight: 500;
     margin-bottom: 5rem;
     text-transform: uppercase;
-}
 
-.section__title::after {
-    content: '';
-    background: #24b79d;
-    display: block;
-    height: .8rem;
-    margin-top: 1rem;
-    position: absolute;
-    width: 30rem;
+    &::after {
+        content: '';
+        background: $primary-color;
+        display: block;
+        height: .8rem;
+        margin-top: 1rem;
+        position: absolute;
+        width: 30rem;
+    }
 }

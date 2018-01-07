@@ -4,17 +4,17 @@
 
 .text--brand-em,
 .text--info {
-    color: #24b79d;
+    color: $primary-color;
 }
 
 .text--invert {
-    color: #f3f3f3;
+    color: $white-color;
 }
 
 .bg--info {
-    background: #24b79d;
+    background: $primary-color;
 }
 
 .bg--contrast {
-    background: #f3f3f3;
+    background: $white-color;
 }

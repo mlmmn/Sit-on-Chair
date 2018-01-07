@@ -2,57 +2,50 @@
  * 6.1 Plans
  */
 
-.plans__card,
-.plans__card::before,
-.plans__card::after {
-    background: #f9f9f9;
-    border: 2px solid #c2c2c2;
-    margin-top: 4rem;
-    position: relative;
-}
+.plans__card {
+    &,
+    &:before,
+    &:after {
+        background: $white-color;
+        border: 2px solid #c2c2c2;
+        margin-top: 4rem;
+        position: relative;
+    }
 
-.plans__card::before,
-.plans__card::after {
-    background: #ffffff;
-    border: inherit;
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: 5.6rem;
-    left: 50%;
-    margin-top: 0;
-    padding: 0;
-    position: absolute;
-    top: -1rem;
-    transform: translate(-50%, -50%);
-    width: 5.6rem;
-}
+    &:before,
+    &:after {
+        background: #ffffff;
+        border: inherit;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 5.6rem;
+        left: 50%;
+        margin-top: 0;
+        padding: 0;
+        position: absolute;
+        top: -1rem;
+        transform: translate(-50%, -50%);
+        width: 5.6rem;
+    }
 
-.plans__card::after {
-    background: #c2c2c2;
-    border: 0;
-    height: 2.8rem;
-    width: 2.8rem;
-}
+    &:after {
+        background: #c2c2c2;
+        border: 0;
+        height: 2.8rem;
+        width: 2.8rem;
+    }
 
-.plans__card--featured,
-.plans__card--featured::before {
-    background: #27c5aa;
-    border: 2px solid #27c5aa;
-}
-
-.plans__card--featured::after {
-    background: #f9f9f9;
+    .button {
+        font-size: 1.8rem;
+        padding: .3em 2em;
+    }
 }
 
 .plans__card__title {
     color: #27c5aa;
     font-size: 2.5rem;
     margin: 3rem auto;
-}
-
-.plans__card--featured .plans__card__title {
-    color: #ffffff;
 }
 
 .plans__card__price {
@@ -65,69 +58,92 @@
     margin: 2rem auto;
     padding: 3rem 0;
     width: 13rem;
-}
-
-.plans__card__price p {
-    margin-bottom: 1rem;
-}
-
-.plans__card--featured .plans__card__price {
-    border: inherit;
+    p {
+        margin-bottom: 1rem;
+    }
 }
 
 .plans__card__price__amount {
     font-size: 5rem;
     margin-bottom: .5rem;
     position: relative;
-}
 
-.plans__card__price__amount+p {
-    font-size: 1.6rem;
-}
+    &+p {
+        font-size: 1.6rem;
+    }
 
-.plans__card--featured .plans__card__price {
-    color: #27c5aa;
-}
-
-.plans__card__price__amount sup {
-    font-size: .4em;
-    position: relative;
-    top: -.5em;
+    sup {
+        font-size: .4em;
+        position: relative;
+        top: -.5em;
+    }
 }
 
 .plans__card__benefits {
     font-size: 2.5rem;
     min-height: 20rem;
+
+    li {
+        color: #9c9c9c;
+        padding: 1rem .5rem;
+
+        &:nth-child(odd) {
+            background: #e4e4e4;
+        }
+
+        &:nth-child(even) {
+            background: #f1f1f1;
+        }
+    }
 }
 
-.plans__card__benefits li {
-    color: #9c9c9c;
-    padding: 1rem .5rem;
-}
+.plans__card--featured {
+    &,
+    &:before {
+    background: $primary-color;
+    border: 2px solid $primary-color;
+    }
 
-.plans__card__benefits li:nth-child(odd),
-.plans__card--featured .plans__card__benefits li:nth-child(even) {
-    background: #e4e4e4;
-}
+    &:after {
+        background: $white-color;
+    }
 
-.plans__card__benefits li:nth-child(even),
-.plans__card--featured .plans__card__benefits li:nth-child(odd) {
-    background: #f1f1f1;
-}
+    .plans__card__title {
+        color: #ffffff;
+    }
 
-.plans__card .button {
-    font-size: 1.8rem;
-    padding: .3em 2em;
-}
+    .plans__card__price {
+        border: inherit;
+    }
 
-.plans__card--featured .button--info:link,
-.plans__card--featured .button--info:visited,
-.plans__card--featured .button--info:active {
-    background: #ffffff;
-    color: #27c5aa;
-}
+    .plans__card__price {
+        color: $primary-color;
+    }
 
-.plans__card--featured .button--info:hover {
-    background: #db4862;
-    color: #ffffff;
+    .plans__card__benefits {
+        li {
+            &:nth-child(even) {
+                background: #e4e4e4;
+            }
+
+            &:nth-child(odd) {
+                background: #f1f1f1;
+            }
+        }
+    }
+
+    .button--info {
+        &,
+        &:link,
+        &:visited,
+        &:active {
+            background: #ffffff;
+            color: $primary-color;
+        }
+
+        &:hover {
+            background: $primary-color;
+            color: #ffffff;
+        }
+    }
 }

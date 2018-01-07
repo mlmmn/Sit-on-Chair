@@ -2,45 +2,49 @@
  * 2.5 Buttons
  */
 
-.button,
-.button:link,
-.button:visited,
-.button:hover,
-.button:active {
-    border: 0;
-    border-radius: 10px;
-    cursor: pointer;
-    display: inline-block;
-    line-height: 1;
-    margin: 2rem 0;
-    outline: none;
-    padding: .5em 2em;
-    text-transform: uppercase;
-}
+.button {
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        border: 0;
+        border-radius: 10px;
+        cursor: pointer;
+        display: inline-block;
+        line-height: 1;
+        margin: 2rem 0;
+        outline: none;
+        padding: .5em 2em;
+        text-transform: uppercase;
+    }
 
-.button--medium,
-.button--big {
-    font-size: 1.5em;
-    font-weight: 500;
-}
+    &.button--medium,
+    &.button--big {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
 
-.button--big {
-    font-size: 2.5em;
-}
+    &.button--big {
+        font-size: 2.5em;
+    }
 
-.button--fluid {
-    width: 100%;
-}
+    &.button--fluid {
+        width: 100%;
+    }
 
-.button--info,
-.button--info:link,
-.button--info:visited,
-.button--info:active {
-    background: #27c5aa;
-    color: #f3f3f3;
-    text-decoration: none;
-}
+    &.button--info {
+        &,
+        &:link,
+        &:visited,
+        &:active {
+            background: $primary-color;
+            color: $white-color;
+            text-decoration: none;
+        }
 
-.button--info:hover {
-    background: #db4862;
+        &:hover {
+            background: $primary-invert-color;
+        }
+    }
 }

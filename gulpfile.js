@@ -6,9 +6,8 @@ gulp.task('sass', function () {
     return gulp.src('scss/style.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
-            errLogToConsole: true,
             outputStyle: 'expanded'
-        }))
+        }).on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('style'))
 });

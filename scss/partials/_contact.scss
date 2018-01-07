@@ -3,7 +3,7 @@
  */
 
 .contact__form__input {
-    border: 1px solid #27c5aa;
+    border: 1px solid $primary-color;
     display: block;
     font-family: inherit;
     font-size: 4rem;
@@ -13,11 +13,11 @@
     padding: 1rem;
     transition: box-shadow .15s;
     width: 100%;
-}
 
-.contact__form__input:focus {
-    box-shadow: 0 0 10px #27c5aa;
-    outline: 0;
+    &:focus {
+        box-shadow: 0 0 10px $primary-color;
+        outline: 0;
+    }
 }
 
 textarea.contact__form__input {
@@ -30,29 +30,27 @@ textarea.contact__form__input {
 }
 
 .contact__form__agreement {
-    color: #999999;
+    color: $lightgray-color;
     font-size: 1.6rem;
     margin: 3.1rem auto;
     display: block;
-}
 
-.contact__form__agreement input[type="checkbox"] {
-    height: 4rem;
-    float: left;
-    margin-top: -.5rem;
-    margin-right: 1rem;
-    width: 4.8rem;
-}
-
-.contact__form__agreement input[type="checkbox"]::before {
-    border: 1px solid #27c5aa;
-    background: #ffffff;
-    content: '';
-    display: inline-block;
-    height: 4rem;
-    width: 4.8rem;
-}
-
-.contact__form__agreement input[type="checkbox"]:checked::before {
-    background: url("../images/form_ok.jpg");
+    input[type="checkbox"] {
+        height: 4rem;
+        float: left;
+        margin-top: -.5rem;
+        margin-right: 1rem;
+        width: 4.8rem;
+        &::before {
+            border: 1px solid $primary-color;
+            background: white;
+            content: '';
+            display: inline-block;
+            height: 4rem;
+            width: 4.8rem;
+        }
+        &:checked::before {
+            background: url("../images/form_ok.jpg");
+        }
+    }
 }
