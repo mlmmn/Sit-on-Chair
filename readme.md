@@ -16,6 +16,8 @@ This is a sample website project made purely for portfolio purposes by showing m
 - [x] JS: dropdown menu
 - [x] JS: image slider
 - [x] JS: showcase title hover effect
+- [x] Gulp task runner
+- [x] Autoprefixer
 
 ## Design sample
 ![Target design](warsztat1.jpg)
