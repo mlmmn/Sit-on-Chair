@@ -18,16 +18,17 @@
     color: #000000;
 }
 
-.hero>.container {
-    padding: 10rem 0 5rem 0;
+.hero__container {
+    height: 75vh;
+    min-height: 50rem;
 }
 
 .carousel__arrow {
-    color: #24b79d;
+    color: $primary-color;
     cursor: pointer;
     display: block;
     font-size: 8rem;
-    padding-top: 7.5rem;
+    padding: 0 $column-gutter;
 }
 
 

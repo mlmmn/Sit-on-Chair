@@ -1,33 +1,38 @@
 /**
  * 3.2 Nav
  */
+.site-menu {
+    color: $white-color;
+    font-weight: 500;
+    text-transform: uppercase;
+}
 
 .site-menu__element {
-    color: $white-color;
     display: inline-block;
     position: relative;
+
+    // &:last-child {
+    //     margin-right: -2rem;
+    // }
+
+    a:link,
+    a:visited {
+        color: inherit;
+        display: block;
+        padding: 1.2rem 2rem;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background: rgba(#ffffff, .2);
+    }
 }
 
-.site-menu>ul>.site-menu__element:last-child {
-    margin-right: -2rem;
-}
-
-.site-menu__element a:link,
-.site-menu__element a:visited {
-    color: inherit;
-    display: block;
-    padding: 1.2rem 2rem;
-    text-decoration: none;
-}
-
-.site-menu__element a:hover {
-    background: rgba(255, 255, 255, .2);
-}
-
-.site-menu .site-menu__dropdown {
+.site-menu--dropdown {
     display: none;
     padding-top: 1.2rem;
     position: absolute;
+    text-align: center;
 
     .site-menu__element {
         background: $black-color;
@@ -53,6 +58,6 @@
     }
 }
 
-.site-menu .site-menu__dropdown--visible {
+.site-menu--dropdown-visible {
     display: block;
 }

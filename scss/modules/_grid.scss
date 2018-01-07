@@ -1,47 +1,56 @@
 /**
  * 2.2 Grid
  */
-@mixin column() {
-    float: left;
-    padding: 0 15px;
-    min-height: 1px;
-}
-
-@mixin clearfix() {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .container {
-    margin: 3rem auto 5rem auto;
+    margin: 0 auto;
     max-width: 105rem;
+    padding: 3rem 0 5rem 0;
 
     &.container--compact {
-        margin: 0 auto;
+        padding: 0;
     }
 }
 
 .row {
-    margin: 0 -1.5rem;
-
-    &:before,
-    &:after {
-        @include clearfix();
-    }
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin-left: -$column-gutter;
+    margin-right: -$column-gutter;
 }
 
-.clearfix:before,
-.clearfix:after {
-    @include clearfix();
+.row--justify-space-around {
+    justify-content: space-around;
 }
 
-[class*="col--"] {
-    @include column();
+.row--justify-space-between {
+    justify-content: space-between;
+}
+
+.row--align-center {
+    align-items: center;
+}
+
+.col {
+    flex: 1 1 auto;
+    padding: 0 $column-gutter;
+}
+
+.col--compact {
+    flex-grow: 0;
+}
+
+.col--justify-center {
+    justify-self: center;
+}
+
+.col--justify-left {
+    justify-self: flex-end;
 }
 
 @for $i from 1 through 12 {
     .col--#{$i} {
+        flex: none;
         width: $i/12 * 100%;
     }
 }

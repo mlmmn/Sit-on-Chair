@@ -14,35 +14,34 @@
 
   <header class="site-header">
     <div class="container container--compact">
-      <div class="row">
-        <div class="col--6">
-          <h1 class="site-name text--invert text--uppercase text--semibold">Sit <span class="text--brand-em">On</span> Chair</h1>
+      <div class="row row--align-center row--justify-space-between">
+        <div class="col col--compact">
+          <h1 class="text--invert text--uppercase text--semibold">Sit <span class="text--brand-em">On</span> Chair</h1>
         </div>
-        <div class="col--6">
-          <div class="site-menu" role="navigation">
-            <ul class="text--invert text--uppercase text--right text--semibold">
-              <li class="site-menu__element">
-                <a href="#">About us</a>
+        <nav class="col col--compact col--justify-left">
+          <ul class="site-menu">
+            <li class="site-menu__element">
+              <a href="#">About us</a>
 
-                <ul class="site-menu__dropdown text--center">
-                  <li class="site-menu__element"><a href="#">Newsfeed</a></li>
-                  <li class="site-menu__element"><a href="#">Our Team</a></li>
-                  <li class="site-menu__element"><a href="#">History</a></li>
-                </ul>
-              </li>
-              <li class="site-menu__element"><a href="#">Gallery</a></li>
-              <li class="site-menu__element"><a href="#">Contact</a></li>
-            </ul>
-          </div>
-        </div>
+              <ul class="site-menu site-menu--dropdown">
+                <li class="site-menu__element"><a href="#">Newsfeed</a></li>
+                <li class="site-menu__element"><a href="#">Our Team</a></li>
+                <li class="site-menu__element"><a href="#">History</a></li>
+              </ul>
+            </li>
+            <li class="site-menu__element"><a href="#">Gallery</a></li>
+            <li class="site-menu__element"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
 
   <div class="hero">
-    <div class="container container--compact">
-      <div class="row carousel">
-        <i class="col--1 carousel__arrow fa fa-angle-left" aria-hidden="true" data-dir="prev"></i>
+    <div class="container hero__container">
+      <div class="row row--align-center row--justify-space-between carousel">
+        <i class="carousel__arrow fa fa-angle-left" aria-hidden="true" data-dir="prev"></i>
+
         <div class="col--4">
           <ul class="carousel__list">
             <li class="carousel__list__element--active">
@@ -65,7 +64,8 @@
             rerum, odit esse neque ea aut deserunt tempore voluptatem molestias.</p>
           <a href="#" class="button button--medium button--info">See more</a>
         </div>
-        <i class="col--1 text--right carousel__arrow fa fa-angle-right" aria-hidden="true" data-dir="next"></i>
+
+        <i class="text--right carousel__arrow fa fa-angle-right" aria-hidden="true" data-dir="next"></i>
       </div>
     </div>
   </div>
@@ -76,19 +76,19 @@
     </header>
     <div class="container">
       <div class="row">
-        <div class="col--4">
+        <div class="col col--4">
           <div class="showcase__card">
             <h3 class="showcase__card__title">Chair CLAIR</h3>
             <img src="images/box1_img.jpg" alt="Chair CLAIR" class="img--fluid">
           </div>
         </div>
-        <div class="col--4">
+        <div class="col col--4">
           <div class="showcase__card">
             <h3 class="showcase__card__title">Chair MARGARITA</h3>
             <img src="images/box2_img.jpg" alt="Chair MARGARITA" class="img--fluid">
           </div>
         </div>
-        <div class="col--4">
+        <div class="col col--4">
           <div class="showcase__card showcase__card--informative">
             <h3 class="showcase__card__title">Finds all inputs</h3>
             <p>Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no clicking events have been linked.</p>
@@ -99,14 +99,14 @@
     </div>
   </section>
 
-  <section class="plans bg--contrast clearfix">
+  <section class="plans bg--contrast">
     <div class="container">
       <header>
         <h2 class="section__title">Our plans</h2>
       </header>
 
       <div class="row">
-        <div class="col--4">
+        <div class="col col--4">
           <div class="plans__card text--center">
             <h3 class="text--center text--uppercase plans__card__title">Basic Plan</h3>
             <div class="plans__card__price">
@@ -127,7 +127,7 @@
             <a href="#" class="button button--info">Join</a>
           </div>
         </div>
-        <div class="col--4">
+        <div class="col col--4">
           <div class="plans__card plans__card--featured text--center">
             <h3 class="text--center text--uppercase plans__card__title">Standard Plan</h3>
             <div class="plans__card__price">
@@ -149,7 +149,7 @@
             <a href="#" class="button button--info">Join</a>
           </div>
         </div>
-        <div class="col--4">
+        <div class="col col--4">
           <div class="plans__card text--center">
             <h3 class="text--center text--uppercase plans__card__title">Advanced Plan</h3>
             <div class="plans__card__price">
@@ -183,12 +183,12 @@
       </header>
 
       <form class="contact__form row">
-        <div class="col--8">
+        <div class="col col--8">
           <input class="contact__form__input" type="text" name="name" placeholder="Your name">
           <input class="contact__form__input" type="email" name="email" placeholder="Your e-mail">
           <textarea class="contact__form__input" name="message" placeholder="Message"></textarea>
         </div>
-        <div class="col--4">
+        <div class="col col--4">
           <img src="images/red_chair.png" alt="A comfortable red chair" class="img--center">
           <label class="contact__form__agreement"><input type="checkbox" name="agreement">I hereby agree to my personal data being processed</label>
           <button class="button button--info button--big button--fluid" type="submit">Submit</button>
@@ -198,21 +198,19 @@
   </section>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col--6 text--semibold site-footer--padded-col">
+    <div class="container container--compact">
+      <div class="row row--align-center row--justify-space-between">
+        <div class="col col--6 text--semibold">
           Copyright 2017 | All Rights Reserved. - Sit On Chair
         </div>
-        <div class="col--4 text--right site-footer__social">
+        <div class="col col--4 text--right site-footer__social">
           <a href="#"><img src="images/flickr.png" alt="Flickr"></a>
           <a href="#"><img src="images/vimeo.png" alt="Vimeo"></a>
           <a href="#"><img src="images/pinterest.png" alt="Pinterest"></a>
           <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
         </div>
-        <div class="col--2 site-footer--padded-col">
-          <p class="title-4 text--right text--uppercase text--semibold">
-            Sit <span class="text--bold">On</span> Chair
-          </p>
+        <div class="col col--2 title-4 text--right text--uppercase text--semibold">
+          Sit <span class="text--bold">On</span> Chair
         </div>
       </div>
     </div>
