@@ -5,14 +5,17 @@ This is a sample website project made purely for portfolio purposes by showing m
 
 [View demo](https://mlmmn.github.io/Sit-on-Chair/)
 
-## What's done (so far)
-- [x] Semantic html structure
+## What's done/things used (so far)
+- [x] Semantic HTML structure
 - [x] Dummy content
-- [x] CSS style
-- [x] BEM CSS convention
-- [ ] Used CSS framework
+- [x] CSS: SCSS preprocessor
+- [x] CSS: BEM methodology
+- [x] CSS: Flexbox
+- [ ] CSS framework
 - [ ] Responsive CSS rules
-- [x] JavaScript
+- [x] JS: dropdown menu
+- [x] JS: image slider
+- [x] JS: showcase title hover effect
 
 ## Design sample
 ![Target design](warsztat1.jpg)
