@@ -42,18 +42,18 @@ function bindHeroCarousel() {
 }
 
 function bindDropdownMenu() {
-    var dropdownMenus = document.querySelectorAll('.site-menu__dropdown');
+    var dropdownMenus = document.querySelectorAll('.site-menu--dropdown');
 
     for (var i = 0; i < dropdownMenus.length; i++) {
         var currentMenu = dropdownMenus[i];
         var currentParent = currentMenu.parentElement;
 
         currentParent.addEventListener('mouseenter', function() {
-            currentMenu.classList.add('site-menu__dropdown--visible');
+            currentMenu.classList.add('site-menu--dropdown-visible');
         });
 
         currentParent.addEventListener('mouseleave', function () {
-            currentMenu.classList.remove('site-menu__dropdown--visible');
+            currentMenu.classList.remove('site-menu--dropdown-visible');
         });
     }
 }
