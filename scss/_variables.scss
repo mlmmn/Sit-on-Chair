@@ -1,0 +1,25 @@
+// Colors
+$color-primary: #27c7ab;
+$color-primary-light: lighten($color-primary, 20%);
+
+$background-primary: #fff;
+$background-secondary: #f1f1f1;
+
+$body-font: 'Raleway', sans-serif;
+$body-font-size: 1.4rem;
+
+// Grid
+$column-quantity: 12;
+$column-gutter: 1.5rem;
+
+// Sections
+$section-padding: 5rem 0;
+
+// Site navigation
+$nav-height: 3.8rem;
+$nav-font-size: 1.4rem;
+$nav-background: #000;
+$nav-item-padding-vertical: ($nav-height - $nav-font-size) / 2;
+$nav-item-padding-horizontal: 1em;
+$nav-link-color: #999;
+$nav-link-color-hover: #fff;

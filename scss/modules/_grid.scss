@@ -1,14 +1,6 @@
-/**
- * 2.2 Grid
- */
 .container {
     margin: 0 auto;
     max-width: 105rem;
-    padding: 3rem 0 5rem 0;
-
-    &.container--compact {
-        padding: 0;
-    }
 }
 
 .row {
@@ -19,37 +11,13 @@
     margin-right: -$column-gutter;
 }
 
-.row--justify-space-around {
-    justify-content: space-around;
-}
-
-.row--justify-space-between {
-    justify-content: space-between;
-}
-
-.row--align-center {
-    align-items: center;
-}
-
 .col {
-    flex: 1 1 auto;
+    flex: 1 1 (100% / $column-quantity);
     padding: 0 $column-gutter;
 }
 
-.col--compact {
-    flex-grow: 0;
-}
-
-.col--justify-center {
-    justify-self: center;
-}
-
-.col--justify-left {
-    justify-self: flex-end;
-}
-
 @for $i from 1 through 12 {
-    .col--#{$i} {
+    .col-#{$i} {
         flex: none;
         width: $i/12 * 100%;
     }

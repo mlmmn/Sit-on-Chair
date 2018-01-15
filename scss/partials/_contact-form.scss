@@ -1,0 +1,16 @@
+/**
+ * Contact form specific
+ */
+
+.contact__input--textarea {
+    min-height: 22rem;
+    resize: vertical;
+    overflow-x: hidden;
+}
+
+.contact__agreement {
+    color: #c2c2c2;
+    display: block;
+    font-size: .75em;
+    line-height: 1;
+}

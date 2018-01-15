@@ -1,0 +1,17 @@
+.section {
+    padding: $section-padding;
+    @include zebra-bg($background-primary, $background-secondary)
+}
+
+.section__title {
+    color: inherit;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 2.5em;
+    text-transform: uppercase;
+    &::after {
+        @include title-underline($color-primary);
+    }
+}

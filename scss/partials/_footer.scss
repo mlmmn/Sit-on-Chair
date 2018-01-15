@@ -1,12 +1,22 @@
-/**
- * XX Footer
- */
-
-.site-footer {
-    color: $lightgray-color;
-    font-size: 1.4rem;
+.footer {
+    color: #c2c2c2;
+    padding: 2em 0;
 }
 
-.site-footer__social img {
-    display: inline-block;
+.footer__copyright {
+    font-weight: 500;
+}
+
+.footer__social {
+    text-align: right;
+}
+
+.footer__social-img {
+    max-width: 26px;
+}
+
+.footer__brand {
+    font-weight: 500;
+    text-align: right;
+    text-transform: uppercase;
 }

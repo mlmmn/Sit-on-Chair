@@ -1,0 +1,47 @@
+.slider {
+    height: 100%;
+    position: relative;
+}
+
+.slider__item {
+    display: none;
+    height: 100%;
+}
+
+.slider__item--active {
+    display: block;
+}
+
+.slider__image {
+    width: 100%;
+}
+
+.slider__control {
+    @include link() {
+        background-color: transparent;
+        border: 0;
+        color: $color-primary;
+        cursor: pointer;
+        font-size: 8rem;
+        line-height: 1;
+        outline: none;
+        padding: 0;
+        position: absolute;
+        margin: 0;
+        text-decoration: none;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .1s;
+    }
+    &:hover {
+        color: $color-primary-light;
+    }
+}
+
+.slider__control--prev {
+    left: 0;
+}
+
+.slider__control--next {
+    right: 0;
+}

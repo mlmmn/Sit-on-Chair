@@ -1,220 +1,244 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,400i,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,500,700" rel="stylesheet">
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="style/style.css">
   <title>Sit On Chair | Have a seat!</title>
 </head>
+
 <body>
 
-  <header class="site-header">
-    <div class="container container--compact">
-      <div class="row row--align-center row--justify-space-between">
-        <div class="col col--compact">
-          <h1 class="text--invert text--uppercase text--semibold">Sit <span class="text--brand-em">On</span> Chair</h1>
+  <!-- SITE HEADER -->
+  <header id="slider" class="header">
+    <h1 class="hidden">Sit On Chair</h1>
+    <div class="container slider">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-4">
+          <div class="slider__item slider__item--active">
+            <img src="images/black_chair.png" alt="A comfortable black chair" class="slider__image">
+          </div>
+          <div class="slider__item">
+            <img src="images/chair_PNG6902.png" alt="A chair of your dreams" class="slider__image">
+          </div>
+          <div class="slider__item">
+            <img src="images/Transparent_Brown_Leather_Chair_PNG_Clipart.png" alt="A king's chair" class="slider__image">
+          </div>
         </div>
-        <nav class="col col--compact col--justify-left">
-          <ul class="site-menu">
-            <li class="site-menu__element">
-              <a href="#">About us</a>
-
-              <ul class="site-menu site-menu--dropdown">
-                <li class="site-menu__element"><a href="#">Newsfeed</a></li>
-                <li class="site-menu__element"><a href="#">Our Team</a></li>
-                <li class="site-menu__element"><a href="#">History</a></li>
-              </ul>
-            </li>
-            <li class="site-menu__element"><a href="#">Gallery</a></li>
-            <li class="site-menu__element"><a href="#">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="col-6">
+          <p class="header__heading">
+            Sit
+            <span class="text-primary">On</span> Our
+            <span class="text-primary">Chair</span>
+          </p>
+          <p class="header__bollocks">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos repellat aspernatur ipsam eaque impedit debitis nesciunt rerum,
+            odit esse neque ea aut deserunt tempore voluptatem molestias.
+          </p>
+          <p class="header__bollocks">
+            <a href="#" class="button button--color--primary button--size--medium">See more</a>
+          </p>
+        </div>
       </div>
+
+      <button class="slider__control slider__control--prev" data-slide="prev">&lt;</button>
+      <button class="slider__control slider__control--next" data-slide="next">&gt;</button>
     </div>
   </header>
 
-  <div class="hero">
-    <div class="container hero__container">
-      <div class="row row--align-center row--justify-space-between carousel">
-        <i class="carousel__arrow fa fa-angle-left" aria-hidden="true" data-dir="prev"></i>
+  <!-- SITE NAVIGATION -->
+  <nav class="nav">
+    <h2 class="hidden">Main navigation</h2>
+    <ul class="container nav__list">
+      <li class="nav__item nav__item--separated">
+        <a href="#" class="nav__link nav__link--brand">
+          Sit
+          <span class="text-primary">On</span> Chair
+        </a>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">About us</a>
 
-        <div class="col--4">
-          <ul class="carousel__list">
-            <li class="carousel__list__element--active">
-              <img src="images/black_chair.png" alt="A comfortable black chair" class="img--fluid">
-            </li>
-            <li>
-              <img src="images/chair_PNG6902.png" alt="A chair of your dreams" class="img--fluid">
-            </li>
-            <li>
-              <img src="images/Transparent_Brown_Leather_Chair_PNG_Clipart.png" alt="A king's chair" class="img--fluid">
-            </li>
-        </div>
-        <div class="col--6 text--center">
-          <p class="hero__header title-1 text--uppercase text--semibold">
-            Sit
-            <span class="text--brand-em">On</span> Our
-            <span class="text--brand-em">Chair</span>
-          </p>
-          <p class="hero__bollocks">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos repellat aspernatur ipsam eaque impedit debitis nesciunt
-            rerum, odit esse neque ea aut deserunt tempore voluptatem molestias.</p>
-          <a href="#" class="button button--medium button--info">See more</a>
-        </div>
+        <ul class="nav__list nav__list--dropdown">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Newsfeed</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Our Team</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">History</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Gallery</a>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Contact</a>
+      </li>
+    </ul>
+  </nav>
 
-        <i class="text--right carousel__arrow fa fa-angle-right" aria-hidden="true" data-dir="next"></i>
-      </div>
-    </div>
-  </div>
-
-  <section class="showcase">
-    <header>
-      <h2 class="hidden">Our products</h2>
-    </header>
+  <!-- SHOWCASE SECTION -->
+  <section class="section">
     <div class="container">
+      <header>
+        <h2 class="hidden">Our products</h2>
+      </header>
+
       <div class="row">
-        <div class="col col--4">
-          <div class="showcase__card">
-            <h3 class="showcase__card__title">Chair CLAIR</h3>
-            <img src="images/box1_img.jpg" alt="Chair CLAIR" class="img--fluid">
+        <div class="col">
+          <div class="showcase-card">
+            <h3 class="showcase-card__title">Chair CLAIR</h3>
+            <img src="images/box1_img.jpg" alt="Chair CLAIR" class="showcase-card__image">
           </div>
         </div>
-        <div class="col col--4">
-          <div class="showcase__card">
-            <h3 class="showcase__card__title">Chair MARGARITA</h3>
-            <img src="images/box2_img.jpg" alt="Chair MARGARITA" class="img--fluid">
+
+        <div class="col">
+          <div class="showcase-card">
+            <h3 class="showcase-card__title">Chair MARGARITA</h3>
+            <img src="images/box2_img.jpg" alt="Chair MARGARITA" class="showcase-card__image">
           </div>
         </div>
-        <div class="col col--4">
-          <div class="showcase__card showcase__card--informative">
-            <h3 class="showcase__card__title">Finds all inputs</h3>
-            <p>Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no clicking events have been linked.</p>
+
+        <div class="col">
+          <div class="showcase-card showcase-card--informative">
+            <h3 class="showcase-card__title">Finds all inputs</h3>
+            <p>Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking
+              the checkboxes since no clicking events have been linked.</p>
             <p>Notice there is no change when clicking the checkboxes since no clicking events have been linked.</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section class="plans bg--contrast">
+  <!-- PLANS SECTION -->
+  <section class="section">
     <div class="container">
       <header>
         <h2 class="section__title">Our plans</h2>
       </header>
 
       <div class="row">
-        <div class="col col--4">
-          <div class="plans__card text--center">
-            <h3 class="text--center text--uppercase plans__card__title">Basic Plan</h3>
-            <div class="plans__card__price">
-              <p class="plans__card__price__amount">
-                85<sup>99</sup>
-              </p>
-              <p>
-                USD/M
-              </p>
-            </div>
-
-            <div class="plans__card__benefits">
-              <ul>
-                <li>Purchase + delivery</li>
-                <li>Service</li>
-              </ul>
-            </div>
-            <a href="#" class="button button--info">Join</a>
+        <div class="col">
+          <div class="plans-card">
+            <h3 class="plans-card__title">Basic Plan</h3>
+            <p class="plans-card__price">
+              85
+              <sup>99</sup>
+              <span class="plans-card__currency">USD/M</span>
+            </p>
+            <ul class="plans-card__benefit-list">
+              <li class="plans-card__benefit-item">Purchase + delivery</li>
+              <li class="plans-card__benefit-item">Service</li>
+            </ul>
+            <a href="#" class="button button--color--primary plans-card__button">Join</a>
           </div>
         </div>
-        <div class="col col--4">
-          <div class="plans__card plans__card--featured text--center">
-            <h3 class="text--center text--uppercase plans__card__title">Standard Plan</h3>
-            <div class="plans__card__price">
-              <p class="plans__card__price__amount">
-                95<sup>99</sup>
-              </p>
-              <p>
-                USD/M
-              </p>
-            </div>
 
-            <div class="plans__card__benefits">
-              <ul>
-                <li>Purchase + delivery</li>
-                <li>Service</li>
-                <li>5 years warranty</li>
-              </ul>
-            </div>
-            <a href="#" class="button button--info">Join</a>
+        <div class="col">
+          <div class="plans-card plans-card--featured">
+            <h3 class="plans-card__title">Standard Plan</h3>
+            <p class="plans-card__price">
+              95
+              <sup>99</sup>
+              <span class="plans-card__currency">USD/M</span>
+            </p>
+            <ul class="plans-card__benefit-list">
+              <li class="plans-card__benefit-item">Purchase + delivery</li>
+              <li class="plans-card__benefit-item">Service</li>
+              <li class="plans-card__benefit-item">5 years warranty</li>
+            </ul>
+            <a href="#" class="button button--color--primary-inverted plans-card__button">Join</a>
           </div>
         </div>
-        <div class="col col--4">
-          <div class="plans__card text--center">
-            <h3 class="text--center text--uppercase plans__card__title">Advanced Plan</h3>
-            <div class="plans__card__price">
-              <p class="plans__card__price__amount">
-                211<sup>00</sup>
-              </p>
-              <p>
-                USD/M
-              </p>
-            </div>
 
-            <div class="plans__card__benefits">
-              <ul>
-                <li>Purchase + delivery</li>
-                <li>Service</li>
-                <li>6 years warranty</li>
-                <li>Designer's tips</li>
-              </ul>
-            </div>
-            <a href="#" class="button button--info">Join</a>
+        <div class="col">
+          <div class="plans-card">
+            <h3 class="plans-card__title">Advanced Plan</h3>
+            <p class="plans-card__price">
+              211
+              <sup>00</sup>
+              <span class="plans-card__currency">USD/M</span>
+            </p>
+            <ul class="plans-card__benefit-list">
+              <li class="plans-card__benefit-item">Purchase + delivery</li>
+              <li class="plans-card__benefit-item">Service</li>
+              <li class="plans-card__benefit-item">6 years warranty</li>
+              <li class="plans-card__benefit-item">Designer's tips</li>
+            </ul>
+            <a href="#" class="button button--color--primary plans-card__button">Join</a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section class="contact">
+  <!-- CONTACT SECTION -->
+  <section class="section contact">
     <div class="container">
       <header>
         <h2 class="section__title">Contact</h2>
       </header>
 
-      <form class="contact__form row">
-        <div class="col col--8">
-          <input class="contact__form__input" type="text" name="name" placeholder="Your name">
-          <input class="contact__form__input" type="email" name="email" placeholder="Your e-mail">
-          <textarea class="contact__form__input" name="message" placeholder="Message"></textarea>
+      <form class="row">
+        <div class="col col-8">
+          <input class="form__input" type="text" name="name" placeholder="Your name">
+          <input class="form__input" type="email" name="email" placeholder="Your e-mail">
+          <textarea class="form__input contact__input--textarea" name="message" placeholder="Message"></textarea>
         </div>
-        <div class="col col--4">
-          <img src="images/red_chair.png" alt="A comfortable red chair" class="img--center">
-          <label class="contact__form__agreement"><input type="checkbox" name="agreement">I hereby agree to my personal data being processed</label>
-          <button class="button button--info button--big button--fluid" type="submit">Submit</button>
+        <div class="col col-4">
+          <div class="text-center">
+            <img src="images/red_chair.png" alt="A comfortable red chair">
+          </div>
+          <label class="form__input form__input--checkbox form__input--marginless">
+            <input type="checkbox" name="Delivery" value="80">
+            <div class="form__checkbox"></div>
+            <span class="contact__agreement">I hereby agree to my personal data being processed</span>
+          </label>
+          <button class="button button--color--primary button--size--medium button--center">Submit</button>
         </div>
       </form>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container container--compact">
-      <div class="row row--align-center row--justify-space-between">
-        <div class="col col--6 text--semibold">
-          Copyright 2017 | All Rights Reserved. - Sit On Chair
+  <!-- SITE FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col col-6 footer__copyright">
+          Copyright 2018 | All Rights Reserved. - Sit On Chair
         </div>
-        <div class="col col--4 text--right site-footer__social">
-          <a href="#"><img src="images/flickr.png" alt="Flickr"></a>
-          <a href="#"><img src="images/vimeo.png" alt="Vimeo"></a>
-          <a href="#"><img src="images/pinterest.png" alt="Pinterest"></a>
-          <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        <div class="col col-4 footer__social">
+          <a href="#">
+            <img src="images/flickr.png" alt="Flickr" class="footer__social-img">
+          </a>
+          <a href="#">
+            <img src="images/vimeo.png" alt="Vimeo" class="footer__social-img">
+          </a>
+          <a href="#">
+            <img src="images/pinterest.png" alt="Pinterest" class="footer__social-img">
+          </a>
+          <a href="#">
+            <img src="images/twitter.png" alt="Twitter" class="footer__social-img">
+          </a>
         </div>
-        <div class="col col--2 title-4 text--right text--uppercase text--semibold">
-          Sit <span class="text--bold">On</span> Chair
+        <div class="col col-2 footer__brand">
+          Sit
+          <span class="text-bold">On</span> Chair
         </div>
       </div>
     </div>
   </footer>
 
 </body>
+
 </html>

@@ -1,77 +1,74 @@
-document.addEventListener('DOMContentLoaded', function() {
-    bindHeroCarousel();
+document.addEventListener('DOMContentLoaded', function () {
+    bindSlider();
     bindDropdownMenu();
     bindShowcaseCards();
 });
 
-function bindHeroCarousel() {
-    var counter = 0;
-    var prevButton = document.querySelector('.carousel__arrow[data-dir=prev]');
-    var nextButton = document.querySelector('.carousel__arrow[data-dir=next]');
+function bindSlider() {
+    var slider = document.querySelector('#slider');
+    var prevButton = slider.querySelector('button[data-slide=prev]');
+    var nextButton = slider.querySelector('button[data-slide=next]');
 
     prevButton.addEventListener('mousedown', prevElement);
     nextButton.addEventListener('mousedown', nextElement);
 
     function prevElement() {
-        var list = this.parentElement.querySelector('.carousel__list');
-        var firstElement = list.firstElementChild;
-        var secondElement = list.lastElementChild;
-        var temp;
+        var sliderItems = this.parentElement.querySelectorAll('.slider__item');
+        var firstItem = sliderItems[0];
+        var nextItem = sliderItems[sliderItems.length - 1];
 
-        firstElement.classList.remove('carousel__list__element--active');
-        secondElement.classList.add('carousel__list__element--active');
+        firstItem.classList.remove('slider__item--active');
+        nextItem.classList.add('slider__item--active');
 
-        temp = secondElement.cloneNode(true);
-        list.removeChild(secondElement);
-        list.insertBefore(temp, firstElement);
+        firstItem.before(nextItem.cloneNode(true));
+        nextItem.remove();
     }
 
     function nextElement() {
-        var list = this.parentElement.querySelector('.carousel__list');
-        var firstElement = list.firstElementChild;
-        var secondElement = firstElement.nextElementSibling;
-        var temp;
+        var sliderItems = this.parentElement.querySelectorAll('.slider__item');
+        var firstItem = sliderItems[0];
+        var nextItem = sliderItems[1];
+        var lastItem = sliderItems[sliderItems.length - 1];
 
-        firstElement.classList.remove('carousel__list__element--active');
-        secondElement.classList.add('carousel__list__element--active');
+        firstItem.classList.remove('slider__item--active');
+        nextItem.classList.add('slider__item--active');
 
-        temp = firstElement.cloneNode(true);
-        list.removeChild(firstElement);
-        list.appendChild(temp);
+        lastItem.after(firstItem.cloneNode(true));
+        firstItem.remove();
     }
 }
 
 function bindDropdownMenu() {
-    var dropdownMenus = document.querySelectorAll('.site-menu--dropdown');
+    var dropdownMenus = document.querySelectorAll('.nav__list--dropdown');
 
     for (var i = 0; i < dropdownMenus.length; i++) {
         var currentMenu = dropdownMenus[i];
         var currentParent = currentMenu.parentElement;
 
-        currentParent.addEventListener('mouseenter', function() {
-            currentMenu.classList.add('site-menu--dropdown-visible');
+        currentParent.addEventListener('mouseenter', function () {
+            currentMenu.classList.add('nav__list--dropdown--visible');
         });
 
         currentParent.addEventListener('mouseleave', function () {
-            currentMenu.classList.remove('site-menu--dropdown-visible');
+            currentMenu.classList.remove('nav__list--dropdown--visible');
         });
     }
 }
 
 function bindShowcaseCards() {
-    var showcaseCards = document.querySelectorAll('.showcase__card:not(.showcase__card--informative)');
+    var showcaseCards = document.querySelectorAll('.showcase-card:not(.showcase-card--informative)');
 
     for (var i = 0; i < showcaseCards.length; i++) {
         var currentCard = showcaseCards[i];
 
         currentCard.addEventListener('mouseenter', function () {
-            var currentCardTitle = this.querySelector('.showcase__card__title');
-            currentCardTitle.classList.add('showcase__card__title--visible');
+            var currentCardTitle = this.querySelector('.showcase-card__title');
+            currentCardTitle.classList.add('showcase-card__title--hidden');
         });
 
         currentCard.addEventListener('mouseleave', function () {
-            var currentCardTitle = this.querySelector('.showcase__card__title');
-            currentCardTitle.classList.remove('showcase__card__title--visible');
+            var currentCardTitle = this.querySelector('.showcase-card__title');
+            currentCardTitle.classList.remove('showcase-card__title--hidden');
         });
     }
 }

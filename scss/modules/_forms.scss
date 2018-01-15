@@ -1,0 +1,48 @@
+/**
+ * Form
+ */
+
+.form__input {
+    background-color: #fff;
+    border: 1px solid $color-primary;
+    display: block;
+    font-family: inherit;
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-bottom: .75em;
+    outline: transparent solid 0;
+    padding: .5em;
+    transition: outline .15s;
+    width: 100%;
+    &:focus {
+        outline: rgba($color-primary, .3) solid 3px;
+    }
+}
+
+.form__input--checkbox {
+    background-color: transparent;
+    border: 0;
+    padding-left: 0;
+    input[type="checkbox"] {
+        display: none;
+    }
+    input[type="checkbox"]~.form__checkbox {
+        background: #fff;
+        border: 1px solid $color-primary;
+        display: block;
+        float: left;
+        height: 1em;
+        margin-right: .5rem;
+        width: 1em;
+    }
+    input[type="checkbox"]:checked~.form__checkbox {
+        background: url("../images/form_ok.jpg");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 95%;
+    }
+}
+
+.form__input--marginless {
+    margin: 0;
+}

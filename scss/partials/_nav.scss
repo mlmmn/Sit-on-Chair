@@ -1,63 +1,73 @@
-/**
- * 3.2 Nav
- */
-.site-menu {
-    color: $white-color;
+.nav {
+    background-color: $nav-background;
+    font-size: $nav-font-size;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav__list {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
     font-weight: 500;
+    list-style: none;
+    padding: 0;
     text-transform: uppercase;
 }
 
-.site-menu__element {
-    display: inline-block;
+.nav__item {
+    background-color: $nav-background;
     position: relative;
+    @include compensate-paddings($nav-item-padding-horizontal);
+}
 
-    // &:last-child {
-    //     margin-right: -2rem;
-    // }
+.nav__item--separated {
+    margin-right: auto;
+}
 
-    a:link,
-    a:visited {
-        color: inherit;
+.nav__link {
+    @include link() {
+        color: $nav-link-color;
         display: block;
-        padding: 1.2rem 2rem;
+        line-height: 1;
+        padding: $nav-item-padding-vertical $nav-item-padding-horizontal;
+        text-align: center;
         text-decoration: none;
+        transition: color .1s;
     }
 
-    a:hover {
-        background: rgba(#ffffff, .2);
+    &:hover {
+        color: $nav-link-color-hover;
     }
 }
 
-.site-menu--dropdown {
-    display: none;
-    padding-top: 1.2rem;
-    position: absolute;
-    text-align: center;
+.nav__link--brand {
+    @include link() {
+        color: $nav-link-color-hover;
+    }
+}
 
-    .site-menu__element {
-        background: $black-color;
-        display: block;
-        position: relative;
+.nav__list--dropdown {
+    display: none;
+    padding-top: $nav-item-padding-vertical;
+    position: absolute;
+
+    .nav__item {
+        &:first-child,
+        &:last-child {
+            margin: 0;
+        }
 
         &:first-child::before {
-            content: '';
-            border-bottom: 1rem solid $black-color;
-            border-left: 1rem solid transparent;
-            border-right: 1rem solid transparent;
-            display: block;
-            height: 0;
-            position: absolute;
+            @include arrow($nav-background);
             left: 50%;
             transform: translate(-50%, -100%);
-            width: 0;
-        }
-
-        a {
-            display: block;
         }
     }
 }
 
-.site-menu--dropdown-visible {
+.nav__list--dropdown--visible {
     display: block;
 }

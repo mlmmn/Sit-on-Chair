@@ -1,20 +1,22 @@
 /**
  * Sit On chair style.css
  */
-@import "variables/colors.scss";
-@import "variables/spacing.scss";
+@import "variables.scss";
+@import "mixins.scss";
 
 @import "modules/reset.scss";
-@import "modules/common.scss";
+@import "modules/utilities.scss";
+@import "modules/flex.scss";
 @import "modules/grid.scss";
+@import "modules/sections.scss";
 @import "modules/text.scss";
-@import "modules/colors.scss";
+@import "modules/slider.scss";
 @import "modules/buttons.scss";
+@import "modules/forms.scss";
 
 @import "partials/header.scss";
 @import "partials/nav.scss";
-@import "partials/hero.scss";
 @import "partials/showcase.scss";
 @import "partials/plans.scss";
-@import "partials/contact.scss";
+@import "partials/contact-form.scss";
 @import "partials/footer.scss";

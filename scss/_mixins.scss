@@ -1,0 +1,50 @@
+@mixin link() {
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        @content;
+    }
+}
+
+@mixin compensate-paddings($padding) {
+    &:first-child {
+        margin-left: -$padding;
+    }
+
+    &:last-child {
+        margin-right: -$padding;
+    }
+}
+
+@mixin title-underline($color) {
+    content: '';
+    background: $color;
+    display: block;
+    height: .25em;
+    margin-top: .1em;
+    position: relative;
+    width: 12em;
+}
+
+@mixin arrow($color) {
+    content: '';
+    border-bottom: 1rem solid $color;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+
+@mixin zebra-bg($color-odd, $color-even) {
+    &:nth-child(odd) {
+        background-color: $color-odd;
+    }
+
+    &:nth-child(even) {
+        background-color: $color-even;
+    }
+}
