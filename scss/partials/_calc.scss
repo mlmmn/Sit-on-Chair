@@ -1,0 +1,26 @@
+.calc {
+    background-color: #fff;
+    color: #c2c2c2;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: .5em;
+}
+
+.calc__table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+
+    > tbody {
+        border-bottom: 1px solid #c2c2c2;
+
+        td:first-child {
+            border-right: 1px solid #c2c2c2;
+            width: 80%;
+        }
+    }
+
+    td {
+        padding: .5em;
+    }
+}

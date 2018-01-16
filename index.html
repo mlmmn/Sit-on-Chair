@@ -182,6 +182,83 @@
     </div>
   </section>
 
+  <!-- CALC SECTION -->
+  <section class="section">
+    <div class="container">
+      <div id="calc" class="row justify-content-between form">
+        <div class="col col-4">
+          <header>
+            <h2 class="section__title">Chair Composer</h2>
+          </header>
+
+          <div class="form__input form__select form__select--color--initial">
+            <span class="form__placeholder form__placeholder--color--initial">Select chair</span>
+            <input type="text" value="" class="hidden" required>
+            <ul class="form__select-list">
+              <li class="form__select-item" data-value="200">Chair Clair</li>
+              <li class="form__select-item" data-value="300">Chair Margarita</li>
+              <li class="form__select-item" data-value="400">Chair Selena</li>
+            </ul>
+          </div>
+
+          <div class="form__input form__select">
+            <span class="form__placeholder form__placeholder--color--initial">Select color</span>
+            <input type="text" value="" class="hidden">
+            <ul class="form__select-list">
+              <li class="form__select-item" data-value="0">Red</li>
+              <li class="form__select-item" data-value="50">Black</li>
+              <li class="form__select-item" data-value="100">Orange</li>
+            </ul>
+          </div>
+
+          <div class="form__input form__select form__select--color--initial">
+            <span class="form__placeholder form__placeholder--color--initial">Select material</span>
+            <input type="text" value="" class="hidden">
+            <ul class="form__select-list">
+              <li class="form__select-item" data-value="0">Fabric</li>
+              <li class="form__select-item" data-value="100">Leather</li>
+            </ul>
+          </div>
+
+          <label class="form__input form__input--checkbox">
+            <input type="checkbox" name="Delivery" value="80">
+            <div class="form__checkbox"></div>
+            Delivery
+          </label>
+
+        </div>
+
+        <div class="col col-4 display-flex justify-content-center align-items-start">
+          <img src="images/red_chair.png" alt="A comfortable red chair">
+        </div>
+
+        <div class="col col-4 text--center">
+          <div class="text-right">
+            <p class="section__title">Summary</p>
+          </div>
+          <div class="calc">
+            <table id="calc__table" class="calc__table">
+              <tbody>
+                <tr class="text-primary">
+                  <td>Choose options</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Sum</td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <button class="button button--color--primary button--size--medium">Place order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT SECTION -->
   <section class="section contact">
     <div class="container">
