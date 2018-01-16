@@ -7,35 +7,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function bindSlider() {
     var slider = document.querySelector('#slider');
+    var sliderItems = slider.querySelectorAll('.slider__item');
     var prevButton = slider.querySelector('button[data-slide=prev]');
     var nextButton = slider.querySelector('button[data-slide=next]');
+    var currentIndex = 0;
 
     prevButton.addEventListener('mousedown', prevElement);
     nextButton.addEventListener('mousedown', nextElement);
 
     function prevElement() {
-        var sliderItems = this.parentElement.querySelectorAll('.slider__item');
-        var firstItem = sliderItems[0];
-        var nextItem = sliderItems[sliderItems.length - 1];
+        var nextIndex = currentIndex - 1;
 
-        firstItem.classList.remove('slider__item--active');
-        nextItem.classList.add('slider__item--active');
-
-        firstItem.before(nextItem.cloneNode(true));
-        nextItem.remove();
+        nextIndex = (nextIndex < 0) ? sliderItems.length - 1 : nextIndex;
+        sliderItems[currentIndex].classList.remove('slider__item--active');
+        sliderItems[nextIndex].classList.add('slider__item--active');
+        currentIndex = nextIndex;
     }
 
     function nextElement() {
-        var sliderItems = this.parentElement.querySelectorAll('.slider__item');
-        var firstItem = sliderItems[0];
-        var nextItem = sliderItems[1];
-        var lastItem = sliderItems[sliderItems.length - 1];
+        var nextIndex = currentIndex + 1;
 
-        firstItem.classList.remove('slider__item--active');
-        nextItem.classList.add('slider__item--active');
-
-        lastItem.after(firstItem.cloneNode(true));
-        firstItem.remove();
+        nextIndex = (nextIndex > (sliderItems.length - 1)) ? 0 : nextIndex;
+        sliderItems[currentIndex].classList.remove('slider__item--active');
+        sliderItems[nextIndex].classList.add('slider__item--active');
+        currentIndex = nextIndex;
     }
 }
 
