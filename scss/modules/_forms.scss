@@ -32,7 +32,7 @@
         width: 1em;
     }
     input[type="checkbox"]:checked~.form__checkbox {
-        background: url("../images/form_ok.jpg");
+        background-image: url("../images/form_ok.jpg");
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: 95%;
