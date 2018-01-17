@@ -8,6 +8,13 @@
     }
 }
 
+@mixin list-reset() {
+    list-style-image: url(data:0); // IE/Edge fix
+    list-style-type: none; // IE/Edge fix
+    list-style: none;
+    padding: 0;
+}
+
 @mixin compensate-paddings($padding) {
     &:first-child {
         margin-left: -$padding;

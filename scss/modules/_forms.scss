@@ -73,13 +73,13 @@
     border: inherit;
     display: none;
     left: -1px;
-    list-style: none;
     margin: 0;
-    padding: 0;
     position: absolute;
     right: -1px;
     top: 100%;
     z-index: 1000;
+
+    @include list-reset();
 }
 
 .form__select-item {
