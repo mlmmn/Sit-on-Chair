@@ -9,10 +9,13 @@
 }
 
 @mixin list-reset() {
-    list-style-image: url(data:0); // IE/Edge fix
-    list-style-type: none; // IE/Edge fix
     list-style: none;
-    padding: 0;
+    padding-left: 0;
+
+    &,
+    _:-ms-lang(x) { // hack from https://jeffclayton.wordpress.com/2015/04/07/css-hacks-for-windows-10-and-spartan-browser-preview/
+        list-style-image: url('data:0'); // IE/Edge fix
+    }
 }
 
 @mixin compensate-paddings($padding) {
